@@ -5,19 +5,20 @@ close all;
 %% 读取地图图片
 % Map = imread('../maps/gmapping.jpg');
 % Map = imread('../maps/maze.jpg');
-Map = imread('../maps/load.jpg');
+Map = imread('../maps/load-2.jpg');
 if size(Map, 3) == 1
     Map = repmat(Map, 1, 1, 3);
 end
 
 %% 路径规划
-% startPoint = [1300, 1000];
-% targetPoint = [1750, 920];
-% startPoint = [20, 20];
-% targetPoint = [480, 480];
-startPoint = [160, 379];
-targetPoint = [710, 259];
-option = struct('Diagonal', false, 'OccupyThresh', [], 'InflateRadius', []);
+figure;imshow(Map);
+waitforbuttonpress;
+point = get(gca,'CurrentPoint');
+startPoint = round(point(1, 1:2)) + 1;
+waitforbuttonpress;
+point = get(gca,'CurrentPoint');
+targetPoint = round(point(1, 1:2)) + 1;
+option = struct('Diagonal', false, 'OccupyThresh', [], 'InflateRadius', 1);
 tic;
 [PathList, Mask] = myDijkstra(Map, startPoint, targetPoint, option);
 toc

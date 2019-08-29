@@ -10,10 +10,13 @@ if size(Map, 3) == 1
 end
 
 %% Â·¾¶¹æ»®
-% startPoint = [1300, 1000];
-% targetPoint = [1750, 920];
-startPoint = [20, 20];
-targetPoint = [480, 480];
+figure;imshow(Map);
+waitforbuttonpress;
+point = get(gca,'CurrentPoint');
+startPoint = round(point(1, 1:2)) + 1;
+waitforbuttonpress;
+point = get(gca,'CurrentPoint');
+targetPoint = round(point(1, 1:2)) + 1;
 option = struct('MaxIter', 1000000, 'RandomSampleThresh', 0.5, 'StepLength', 5,...
     'OccupyThresh', [], 'InflateRadius', 5, 'Display', false, 'PauseTime', 0.001);
 tic;
