@@ -1,5 +1,5 @@
 # 1. Introduction
->>Some path planning algorithms based on Matlab, including A star, Dijkstra, RRT and RRT Connect.
+>>Some path planning algorithms implemented by Matlab, including A star, Dijkstra, RRT and RRT Connect.
 
 # 2. Results
 - A star  
