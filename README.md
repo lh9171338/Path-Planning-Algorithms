@@ -14,4 +14,4 @@
 ![image](https://github.com/lh9171338/Path-Planning-Algorithms/blob/master/results/maze-rrtconnect-1.jpg)
 
 # 3. More Resources
-- [Github link](https://github.com/lh9171338/Outline)
+- [Github Link](https://github.com/lh9171338/Outline)
